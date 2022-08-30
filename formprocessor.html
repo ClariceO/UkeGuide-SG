@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--#92d9eb and #7d8dda-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Ukulele Guide">
+    <meta name="author" content="Clarice Ong Si Jie">
+
+    <!--Change icon to logo-->
+    <link rel="icon" type=”image/ico href="images/UkeGuide1.ico">
+
+    <title>Uke Guide</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,500,0,0" />
+    <!-- Custom styles and js -->
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/head.js"></script>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+            expand_less
+        </span></button>
+    <!--navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/UkeGuide1.png" alt="logo" width="30" class="d-inline-block align-text-top">
+                <span style="color:#92d9eb">Uke</span> <span style="color:#7d8dda">Guide</span>
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+                    </svg>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                    <a class="nav-link" href="shop.html">SHOP</a>
+                    <a class="nav-link" href="guide.html">BEGINNER'S GUIDE</a>
+                    <a class="nav-link active" href="about.html">ABOUT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="about container-content text-center" class="submit-main">
+            <h2>Welcome to the Uke Guide Fam</h2>
+            <p>Thanks for Submitting <span style="color:#7d8dda;" id="name" class="blank"></span>!</p>
+            <p>We have noted your business <span style="color:#7d8dda;" id="b_name"> </span> is looking for a place to sell your ukes.</p>
+            <p>You will be contacted within 3 working days.</p>
+            <img style="border-radius: 10px;" src="images/UkeGuide1.jpg">
+        </div>
+    </div>
+
+    <script>
+        var formData = location.search;
+        formData = formData.substring(1, formData.length);
+        while (formData.indexOf("+") != -1) {
+            formData = formData.replace("+", " ");
+        }
+        formData = unescape(formData);
+        var formArray = formData.split("&");
+        var para = new Array();
+
+        for (var i = 0; i < formArray.length; ++i) {
+
+            para = formArray[i].split("=");
+
+            switch (para[0]) {
+                case "name":
+                    document.getElementById("name").innerHTML = para[1];
+                    break;
+                case "b_name": 
+                    document.getElementById("b_name").innerHTML = para[1];
+                    break;
+            }
+
+        }
+    </script>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6 class="footer-header">Head Quaters</h6>
+                    <hr />
+                    <p>
+                        Nanyang Polytechnic <br>
+                        Block L
+                        180 Ang Mo Kio Ave 8,<br>
+                        Singapore 569830
+                    </p>
+                </div>
+                <div class="col">
+                    <h6 class="footer-header">Contact Us</h6>
+                    <hr />
+                    <p>Tel: +65 8123 4567</p>
+                    <p>Email: <a href="mailto:211213R@mymail.nyp.edu.sg">Uke_Guide@mymail.<br>nyp.edu.sg</a></p>
+                </div>
+                <div class="col">
+                    <h6 class="footer-header">Join the Fam</h6>
+                    <hr />
+                    <p>@UkeGuide_SG</p>
+                    <a target="_blank" href="https://discord.com/"><img src="images/dc.png" alt="Discord Link"></a>
+                    <a target="_blank" href="https://www.instagram.com/"><img src="images/ig.png"
+                            alt="Instagram Link"></a>
+                    <a target="_blank" href="https://www.facebook.com/"><img src="images/fb.png"
+                            alt="Facebook Link"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="images/tt.png" alt="Twitter Link"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.649635
+                149519!2d103.83296888863877!3d1.3792209920081329!2m3!1f0!2f0!3f0!3m2!1i1024!2i76
+                8!4f13.1!3m3!1m2!1s0x31da16eb92a1ba23%3A0x8f5f35132b90361f!2sNanyang%20Polytechnic%20Blo
+                ck%20L!5e0!3m2!1sen!2ssg!4v1652934931004!5m2!1sen!2ssg" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="row text-center copyright">
+            <p>Copyright &copy; 2022 Clarice Ong Si Jie, Uke Guide Singapore. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/body.js"></script>
+</body>
+
+</html>
