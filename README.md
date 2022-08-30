@@ -1,5 +1,5 @@
 # UkeGuide-SG
-My First Website:
+My First Website Proposal:
 
 I was fond of the sound of ukuleles since young and when I found out that it was easy to learn, I bought a ukulele and searched up some songs to play. While using different ukulele websites I realized that they all have a rather complicated user interface (UI) which in a way made me uninterested to continue using their websites.
 
